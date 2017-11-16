@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Golf Card</title>
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script defer rel="text/javascript" src="js/bootstrap.js"></script>
+		<script defer rel="text/javascript" src="js/main.js"></script>
+
+	</head>
+	<body onload=" loadMe(), courses()">
+		<div class="container-fluid top">
+			<select class="courses active" onchange="getCourse(this.value)"></select>
+		</div>
+
+	</body>
+</html>
