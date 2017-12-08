@@ -70,7 +70,9 @@ function buildCard(myTee){
         let holePar = currentCourse.course.holes[c].tee_boxes[myTee].par;
         $('.scoreColumn').append("<div id='columns" + (Number(c) + 1) +"' class='columns'><span class='holes' onclick='initMap(" + c + ',' + myTee +")'>hole: " + (Number(c)+ 1) + "<br> par: " + holePar+ "</span></div>");
     }
-    $(".scoreColumn").append("<div class='totalC columns'>Total</div>");
+    let yards = currentCourse.course.tee_types[myTee].yards;
+    $(".scoreColumn").append("<div class='totalC columns'><span class='holes'>Score</span></div>");
+    $(".scoreColumn").append("<div class='yards columns'>Total course Yards " + yards + "</div>");
     fillCard();
     $('.card').addClass('shadow');
 }
