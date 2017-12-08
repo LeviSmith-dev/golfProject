@@ -4,18 +4,58 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Golf Card</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/custom.css">
-
-		<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script defer
+						src="https://code.jquery.com/jquery-3.2.1.js"
+						integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+						crossorigin="anonymous"></script>
 		<script defer rel="text/javascript" src="js/bootstrap.js"></script>
 		<script defer rel="text/javascript" src="js/main.js"></script>
 
 	</head>
-	<body onload=" loadMe(), courses()">
-		<div class="container-fluid top">
-			<select class="courses active" onchange="getCourse(this.value)"></select>
-		</div>
+	<body onload="loadMe(), courses()">
 
+		<div class="container">
+			<select class="courses" onchange="getCourse(this.value)"></select>
+			<select id="teeSelect" onchange="buildCard(this.value)"></select>
+		</div>
+			<div class="top shadow">
+
+			</div>
+			<div class="bottom">
+
+			</div>
+		<div class="container-fluid">
+			<div class="card">
+				<div class="player col-md-2">
+
+				</div>
+				<div class="scoreColumn col-md-10">
+
+				</div>
+			</div>
+			<div class="currentHole">
+
+			</div>
+		</div>
+		<div class="container">
+				<h1 class="text-center bottom-text shadow">Click on hole number to see location of the tee and green.</h1>
+		</div>
+		<div id="map">
+
+		</div>
+	<div class="bg-content"></div>
+
+		<!--<div class="weather" onload="getWeather()">-->
+			<!--<div id="currentConditions"></div>-->
+			<!--<div id="currentTemp"></div>-->
+			<!--<div id="weatherImg"></div>-->
+		<!--</div>-->
+
+
+
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsDq_5tf8Gl0-9v-TxYlyJEzsmhotNMz4&callback=initMap" async defer></script>
 	</body>
 </html>

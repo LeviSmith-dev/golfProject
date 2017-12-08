@@ -1,19 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700');
+
 html{
 	width:100%;
 	height:100%;
 	margin:0;
 	padding:0;
 
-	.top{
-		height:400px;
-		background-image: url('../images/golfcourse-bg.jpg');
-		background-repeat: no-repeat;
-		background-size: cover;
-		position:relative;
-		background-position: center;
+	.bg-content{
+		width:100%;
+		height:auto;
+		background-image: url('../images/bg.jpg');
+		//position:fixed;
+		top:0;
+		bottom:0;
+		right:0;
+		left:0;
+		background-position: 50% 50%;
+		background-size:cover;
+		margin:0 auto;
+		position:absolute;
+		min-height: 860px;
+		padding-top:50px;
+		z-index:-1;
+		-webkit-filter:blur(4px);
+	}
+
+	.overlay{
+		width:100%;
+		overflow:hidden;
+		position:absolute;
+		z-index:999;
+		min-width:600px;
+	}
+
+
+	.top {
+		background-color:#000000;
+		width:100%;
+		height:75px;
+		font-family: 'Dancing Script', cursive;
+		color: white;
+		display:flex;
+		align-content: center;
+		justify-content:center;
+	}
+}
+
+.container-fluid{
+	margin: 0 auto;
+
+	.card{
+	margin-top:45px;
+
+		.player {
+			display: flex;
+			flex-direction: column;
+			background-color: white;
+			box-sizing: border-box;
+			margin-top:37px;
+
+			span {
+				padding-left: 5px;
+				color: black;
+				min-height:100px;
+			}
+			.players {
+				margin: 7.5px 7.5px;
+
+			}
+		}
+	}
+}
+
+
+
+.bottom-text {
+	font-family: 'Dancing Script', cursive;
+	color:darklategray;
+	background-color:lightblue;
+}
+
+
+
+.red{
+	color:red;
+}
+
+.courses{
+	margin:45px 45px;
+}
+
+.scoreColumn {
+	display: flex;
+	z-index: 999;
+
+	.columns {
+		border: 1px solid #000000;
+		max-width: 58px;
+		background-color: #888888;
+
+		.holeInput{
+			max-width:58px;
+			overflow:hidden;
+		}
+	}
+
+	.totalC {
+		max-width:58px;
+
+		.holeInput{
+			max-width:58px;
+		}
+	}
+
+	.holes {
+		width: 45px;
+		color:white;
 
 	}
-	.courses{
-		margin:45px 45px;
-	}
+}
+
+#map{
+	height:500px;
+	width:500px;
+	margin: 0 auto;
+	margin-top:45px;
+
+
+}
+
+.shadow {
+	-webkit-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
 }
